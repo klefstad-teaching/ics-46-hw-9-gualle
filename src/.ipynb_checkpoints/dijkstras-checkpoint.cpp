@@ -7,7 +7,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
     vector<int> distances(numVertices, INF);
     vector<bool> visited(numVertices, false);
 	distances[source] = 0;
-    previous.resize(numVertices, -1);  //in ppt said undefined ,but -1 might be more clear for me
+    previous.assign(numVertices, -1);  //in ppt said undefined ,but -1 might be more clear for me
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> minHeap; //the defalt is maxheap
     minHeap.push({0,source}); //easier to compare for pq since i don't use node
 	
