@@ -69,11 +69,10 @@ void print_word_ladder(const vector<string>& ladder){
         cout << "No word ladder found!" << endl;
         return;
     }
-    for (size_t i = 0; i < ladder.size()-1; ++i) {
+    for (size_t i = 0; i < ladder.size(); ++i) {
         cout << ladder[i]; 
-		cout << " -> ";
+		cout << " ";
     }
-	cout<<ladder.back();
     cout << endl;
 }
 
